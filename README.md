@@ -1,3 +1,5 @@
+![Kubernetes Image](kubernetes.webp)
+
 # kubernetes_kata
 
 various katas to whet my kubernetes skills
