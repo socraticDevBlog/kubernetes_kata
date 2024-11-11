@@ -1,2 +1,28 @@
 # kubernetes_kata
-various katas to practice kubernetes skills
+
+various katas to whet my kubernetes skills
+
+## namespace
+
+before provisionning any resource to your cluster, create a `kata-ns` and
+provision all resources to this namespace
+
+when you're finish working, delete all resources to keep your lab cluster clean
+
+```bash
+kubectl delete -f ns.yml
+```
+
+## coming soon
+
+- job and cron
+- RBAC and service accounts
+- helm
+- kustomize
+- multi-environment deployments
+- horizontal pod scaling
+- network policies
+- custom resource definition (CRD)
+- logging and monitoring
+- ci/cd with kubernetes
+- statefulset

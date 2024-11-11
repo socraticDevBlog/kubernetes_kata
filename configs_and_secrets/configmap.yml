@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  APP_MESSAGE: Hello, Kubernetes Kata!
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: app-config
+  namespace: kata-ns

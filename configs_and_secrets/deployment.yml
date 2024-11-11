@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kata-app
+  name: app-deployment
+  namespace: kata-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kata-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kata-app
+    spec:
+      containers:
+      - image: nginx:latest
+        name: kata-app
+        env:
+          - name: APP_MESSAGE
+            valueFrom:
+              configMapKeyRef:
+                name: app-config
+                key: APP_MESSAGE
+          - name: APP_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: app-secret
+                key: APP_SECRET_KEY
+        ports:
+          - containerPort: 80
+
