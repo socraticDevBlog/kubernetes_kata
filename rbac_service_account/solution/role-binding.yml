@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: log-reader-binding
+  namespace: kata-ns
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: log-reader
+subjects:
+- kind: ServiceAccount
+  name: logs-svc
+  namespace: kata-ns

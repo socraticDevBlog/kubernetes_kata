@@ -18,7 +18,6 @@ kubectl delete -f ns.yml
 ## coming soon
 
 - job and cron
-- RBAC and service accounts
 - helm
 - kustomize
 - multi-environment deployments
