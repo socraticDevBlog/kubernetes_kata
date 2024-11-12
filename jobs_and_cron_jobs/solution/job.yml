@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  creationTimestamp: null
+  name: kata-log-cleaner-job
+  namespace: kata-ns
+spec:
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: busybox
+        command:
+        - sh
+        - -c
+        - echo "Cleaning logs"; for i in {1..6}; do echo "Cleaning logs"; sleep 25; done; echo "logs cleaned"
+        name: kata-log-cleaner-job
+        resources: {}
+      restartPolicy: Never
+status: {}

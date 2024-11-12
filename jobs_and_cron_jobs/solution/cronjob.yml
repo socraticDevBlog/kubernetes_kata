@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  name: kata-cronjob
+  namespace: kata-ns
+spec:
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: kata-cronjob
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+            - image: busybox
+              command:
+                - sh
+                - -c
+                - echo "Cleaning logs"; for i in {1..6}; do echo "Cleaning logs"; sleep 25; done; echo "logs cleaned"
+              name: kata-cronjob
+              resources: {}
+          restartPolicy: OnFailure
+  schedule: "* * * * *"
+status: {}
