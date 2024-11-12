@@ -17,7 +17,6 @@ kubectl delete -f ns.yml
 
 ## coming soon
 
-- job and cron
 - helm
 - kustomize
 - multi-environment deployments
