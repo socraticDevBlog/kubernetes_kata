@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+patches:
+  - target:
+      kind: Deployment
+      name: nginx
+    path: patch.yaml
+
+nameSuffix: -dev

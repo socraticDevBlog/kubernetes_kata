@@ -18,8 +18,6 @@ kubectl delete -f ns.yml
 ## coming soon
 
 - helm
-- kustomize
-- multi-environment deployments
 - horizontal pod scaling
 - network policies
 - custom resource definition (CRD)
